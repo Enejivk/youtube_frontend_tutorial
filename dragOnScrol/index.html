@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        place-content: center;
+    }
+
+    .container {
+        width: 700px;
+        height: 500px;
+        display: flex;
+        overflow: hidden;
+        padding: 20px;
+        column-gap: 30px;
+        border: 7px solid rgb(136, 0, 255);
+
+    }
+
+    .children {
+        width: 300px;
+        flex-shrink: 0;
+        border: 2px solid rgb(82, 78, 78);
+        text-align: center;
+        font-size: 90px;
+    }
+</style>
+
+<body>
+    <h4>Initial position <span id="mousePosition"></span></h4>
+    <h4>current Position <span id="currentPosition"></span></h4>
+    <h4>distance moved <span id="distancemoved"></span></h4>
+    <div class="container">
+        
+        <div class="children">1</div>
+        <div class="children">2</div>
+        <div class="children">3</div>
+        <div class="children">4</div>
+        <div class="children">5</div>
+        <div class="children">6</div>
+        <div class="children">7</div>
+    </div>
+    <script>
+        // GET THE INITIAL MOUSE POSITION ON THE CONTAINER
+        // DETERMINE OR CALCULATE THE DISTANCE MOVED
+        // UPDATE THE CONTAINER SCROLL TO THE DISTANCE MOVED
+            // hover on scroll
+            // scrolling in opposite direction
+
+        let initialPosition
+        let isMouseDown = false
+        let previousScroll
+        const container = document.querySelector('.container')
+
+        container.addEventListener('mousedown', (e) => {
+            e.preventDefault()
+            isMouseDown = true
+            initialPosition = e.pageX - container.offsetLeft
+            previousScroll = container.scrollLeft
+            document.getElementById('mousePosition').textContent = initialPosition
+        })
+        
+        container.addEventListener('mouseup', () => {
+            isMouseDown = false
+        })
+        container.addEventListener('mouseleave', () => {
+            isMouseDown = false
+        })
+        container.addEventListener('mousemove', (e) => {
+            if(!isMouseDown) return 
+            e.preventDefault()
+            const currentPosition = e.pageX - container.offsetLeft
+            const distanceMoved =   initialPosition - currentPosition
+
+            container.scrollLeft = previousScroll + distanceMoved
+
+            document.getElementById('currentPosition').textContent = currentPosition
+            document.getElementById('distancemoved').textContent = distanceMoved
+        })
+    </script>
+</body>
+
+</html>
