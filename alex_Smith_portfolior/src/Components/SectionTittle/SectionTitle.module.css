@@ -1,0 +1,24 @@
+:root{
+    --text-grey-color: #ffffff7b;
+}
+.sectionTitle{
+    display: flex;
+    justify-content: space-between;
+    height: 160px;
+    align-items: center;
+    padding: 20px 30px;
+    border-top: 1px solid var(--text-grey-color);
+    border-bottom: 1px solid var(--text-grey-color);
+
+    margin: 20px 0px;
+    background-color: rgb(59, 58, 58);
+}
+
+.sectionTitle h1{
+    font-size: 44px;
+    color: white;
+}
+.sectionTitle .otherText{
+    align-self: flex-start;
+    color: var(--text-grey-color);
+}

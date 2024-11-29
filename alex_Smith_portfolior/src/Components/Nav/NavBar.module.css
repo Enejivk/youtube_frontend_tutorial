@@ -1,0 +1,61 @@
+.navigationContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.logo h1 {
+    font-size: 20px;
+}
+
+.menuLInks {
+    display: flex;
+    column-gap: 40px;
+}
+
+.menuLInks a {
+    color: rgba(255, 255, 255, 0.527);
+}
+
+.menuLInks a:hover {
+    color: white;
+}
+
+.menuLInks a {
+    text-decoration: none;
+}
+
+.menuButton {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    .menuLInks {
+        position: fixed;
+        flex-direction: column;
+        right: -100%;
+        top: 60px;
+        width: 200px;
+        background-color: rgb(53, 53, 53);
+        row-gap: 20px;
+        bottom: 0;
+        padding: 20px;
+        transition: 0.8s;
+    }
+
+        .showMenu{
+            right: 0%;
+        }
+
+    .menuButton {
+        display: block;
+    }
+}

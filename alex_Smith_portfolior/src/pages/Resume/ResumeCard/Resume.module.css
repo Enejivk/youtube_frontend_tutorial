@@ -1,0 +1,49 @@
+.resumeCard {
+    border-bottom: 0.1px solid #ffffff23;
+    border-left: 0.1px solid #ffffff23;
+    
+    padding: 15px 0;
+}
+
+.dateAndLocation {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    margin-left: -10px;
+}
+
+.description {
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+}
+
+
+.description p {
+    color: #ffffffcb;
+    font-size: 15px;
+}
+
+.date {
+    border: 2px solid #007CED;
+    padding: 2px 15px;
+    border-radius: 20px;
+    background-color: rgb(59, 57, 57);
+    font-size: 15px;
+}
+
+.location {
+    color: #ffffff6f;
+}
+.eductionAndExperience {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+}
+
+@media screen and (max-width: 823px) {
+    .eductionAndExperience {
+        grid-template-columns: 1fr;
+    }
+}

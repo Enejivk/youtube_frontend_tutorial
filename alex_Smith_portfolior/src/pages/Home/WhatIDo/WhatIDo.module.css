@@ -1,0 +1,45 @@
+.whatIdoCard {
+    display: flex;
+    column-gap: 40px;
+}
+
+
+.whatIDoContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    line-height: 30px;
+}
+.whatIdoEntireContainer h1{
+    margin: 20px 0;
+    position: relative;
+}
+.whatIdoEntireContainer h1::after{
+    content: "";
+    position: absolute;
+    border: 2px solid var(--border-color);
+    width: 40px;
+    bottom: 0;
+    left: 0;
+}
+
+.whatIDoContainer p {
+    color: rgba(255, 255, 255, 0.767);
+}
+
+.whatIdoCardImage{
+    width: 130px;
+    height: 100px;
+}
+.whatIdoCardImage img{
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .whatIDoContainer {
+        grid-template-columns: 1fr;
+    }
+    
+    
+}

@@ -1,0 +1,42 @@
+.FunFactSection{
+    padding: 50px 0;
+}
+
+.funFactCardContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.funFactCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #444444;
+    border-radius: 10px;
+    row-gap: 10px;
+    padding: 10px;
+}
+
+.funFactCard img {
+    width: 50px;
+    hyphens: 50px;
+}
+
+.funFactCard h1 {
+    font-size: 38px !important;
+}
+
+@media screen and (max-width: 1000px) {
+    .funFactCardContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+@media screen and (max-width: 600px) {
+    .funFactCardContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}

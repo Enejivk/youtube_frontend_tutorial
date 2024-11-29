@@ -1,0 +1,23 @@
+.tick{
+    position: relative;
+    margin: 16px 0;
+    display: inline-block;
+}
+
+.tick h2{
+    font-size: 21px;
+}
+.tick:after{
+    content: "";
+    width: 30px;
+    position: absolute;
+    border: 1px solid #007CED;
+    bottom: 0;
+}
+.tick::before{
+    content: "";
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border: 1px solid rgb(61, 60, 60);
+}

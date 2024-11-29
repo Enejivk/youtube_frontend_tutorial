@@ -1,0 +1,79 @@
+.certCardContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.9rem;
+}
+
+.certCard{
+    margin-top: 20px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    column-gap: 20px;
+}
+
+.closeIcon{
+    align-self: flex-start;
+    cursor: pointer;
+}
+
+.modal img{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.certCard:hover{
+    transform: translateY(-5px);
+}
+.certCard h2{
+    font-size: 18px;
+}
+.certCard .cerId{
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.67);
+    
+}
+
+.certCard .cerId{
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.67);
+    
+}
+
+.certCard .certDate{
+    font-size: 9px;
+}
+.certCard> div:first-child{
+    background-color: #444444;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.certCard> div:last-child > *{
+    margin: 11px 0;
+}
+
+@media screen and (max-width: 900px) {
+    .certCardContainer{
+        grid-template-columns: 1fr;
+    }
+    
+}

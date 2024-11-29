@@ -1,0 +1,73 @@
+.heroSection {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    justify-content: center;
+    height: 70vh;
+}
+
+.heroSection .userPicture {
+    width: 363.33px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 10px solid #919191;
+}
+
+.heroSection .userPicture img {
+    width: 100%;
+}
+
+.heroText {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    width: 560px;
+    line-height: 30px;
+}
+
+.heroText>p:first-child {
+    color: var(--primary-color);
+}
+
+.heroButtons button {
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: transparent;
+    color: white;
+    box-shadow: 0px 1px 17px -2px rgba(0, 0, 0, 0.75);
+}
+
+.heroButtons button:first-child {
+    border: 2px solid white;
+}
+
+.heroButtons button:last-child {
+    border: 2px solid var(--border-color);
+}
+
+.heroButtons {
+    display: flex;
+    column-gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .heroSection {
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .heroText {
+        width: 100%;
+    }
+
+    .heroSection {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .heroSection .userPicture {
+        width: 100%
+    }
+}
