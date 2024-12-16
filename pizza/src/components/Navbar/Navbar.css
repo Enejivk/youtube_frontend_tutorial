@@ -1,0 +1,75 @@
+.navbar-container {
+  background-color: black;
+  justify-content: space-between;
+  color: white;
+
+  padding: 0 120px;
+  /* TODO: it can be changed */
+}
+
+.logo img {
+  width: 150px;
+}
+
+.logo h1 {
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 10px;
+}
+
+.navbar-container,
+.menu-links-and-orderMeal,
+.navbar-link-items-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-link-items-container a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.menu-links-and-orderMeal button {
+  padding: 15px 25px;
+  cursor: pointer;
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+
+}
+
+.menu-links-and-orderMeal {
+  column-gap: 20px;
+}
+
+.menu-button {
+  display: none;
+}
+
+@media screen and (max-width: 1300px) {
+  .navbar-container {
+    padding: 0 60px;
+  }
+
+  .navbar-link-items-container {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .navbar-container {
+    padding: 0 20px;
+  }
+
+  .logo-bottom-text {
+    display: none;
+  }
+  .menu-links-and-orderMeal button{
+    display: none;
+  }
+}
